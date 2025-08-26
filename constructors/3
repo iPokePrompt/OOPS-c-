@@ -1,0 +1,26 @@
+// Create a class Rectangle with two constructors:Default constructor (sets length & width to 0)Parameterized constructor (takes length & width as input).
+#include<iostream>
+#include<string.h>
+using namespace std;
+class Rectangle{
+  public:
+  int length , width;
+  Rectangle(){
+      length=0;
+      width=0;
+  }
+  Rectangle(int l,int w){
+      this->length=l;
+      this->width=w;
+  }
+  void display(){
+      cout<<"length: "<<length<<"\nwidth :"<<width<<endl;
+  }
+};
+int main(){
+    Rectangle r1;
+    r1.display(); // default constructor
+    Rectangle r2(4,6);
+    r2.display(); // parameterized constructor
+    return 0;
+}
