@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+class student;
+class person{
+    public:
+          string name;
+          int age;
+};
+class student : public person{
+    public:
+          int rollno;
+};
+class gradStudent : public student{
+    public:
+          string researchArea;
+};
+
+int main() {
+	gradStudent s1;
+	
+	s1.name="shyam";
+	s1.age=19;
+	s1.rollno=12321;
+	s1.researchArea="physics";
+	
+	cout<<s1.name<<endl<<s1.age<<endl<<s1.rollno<<endl<<s1.researchArea<<endl;
+	
+	return 0;
+}

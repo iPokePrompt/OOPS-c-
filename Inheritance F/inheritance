@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class student;
+class person{
+    public:
+          string name;
+          int age;
+          
+          person(){
+              cout<<"Its parent constructor";
+          }
+          ~person(){
+              cout<<"\nIts parent destructor";
+          }
+};
+class student : public person{
+    public:
+          int rollno;
+          
+          student(){
+              cout<<"\nIts child constructor";
+          }
+          ~student(){
+              cout<<"\nIts child desturctor";
+          }
+          void getinfo(){
+              cout<<"\nname : "<<name<<endl;
+              cout<<"age : "<<age<<endl;
+              cout<<"rollno : "<<rollno<<endl;
+          }
+};
+
+int main() {
+	student s1;
+	
+	s1.name="shyam";
+	s1.age=19;
+	s1.rollno=12321;
+	
+	s1.getinfo();
+	
+	return 0;
+}
